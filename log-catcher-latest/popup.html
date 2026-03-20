@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>Log Catcher</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>Log Catcher</h1>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-kind="すべて">すべて</button>
+      <button class="tab-btn" data-kind="金額">金額</button>
+      <button class="tab-btn" data-kind="TODO">TODO</button>
+      <button class="tab-btn" data-kind="買うもの">買うもの</button>
+      <button class="tab-btn" data-kind="メモ">メモ</button>
+    </div>
+
+    <div class="toolbar">
+      <button id="reloadBtn">再読込</button>
+      <button id="clearBtn">全削除</button>
+    </div>
+
+    <div id="logs"></div>
+
+    <div class="footer-actions">
+      <button id="importBtn">Import</button>
+      <button id="exportBtn">Export</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

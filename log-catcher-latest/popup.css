@@ -1,0 +1,109 @@
+:root {
+  --bg: #0f1115;
+  --panel: #171a20;
+  --panel-2: #1d222b;
+  --text: #eef2f8;
+  --sub: #a7b0bf;
+  --border: #2a313d;
+  --danger: #ff6b6b;
+  --accent: #7dd3fc;
+  --done: #7d8596;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  width: 420px;
+  max-height: 640px;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.wrap {
+  padding: 14px;
+  display: grid;
+  gap: 12px;
+}
+h1 {
+  margin: 0;
+  font-size: 20px;
+}
+.tabs, .toolbar, .footer-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+button {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+button:hover { background: var(--panel-2); }
+.tab-btn.active {
+  border-color: var(--accent);
+  color: #fff;
+}
+#logs {
+  display: grid;
+  gap: 10px;
+  max-height: 430px;
+  overflow: auto;
+  padding-right: 2px;
+}
+.section-title {
+  font-size: 12px;
+  color: var(--sub);
+  font-weight: 700;
+  letter-spacing: .04em;
+  margin-top: 4px;
+}
+.done-title { color: var(--done); }
+.log-item {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 12px;
+  display: grid;
+  gap: 8px;
+}
+.log-item.done { opacity: .72; }
+.head, .actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.kind {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-size: 12px;
+  border: 1px solid var(--border);
+}
+.kind-金額 { color: #fde68a; }
+.kind-TODO { color: #86efac; }
+.kind-買うもの { color: #c4b5fd; }
+.kind-メモ { color: #93c5fd; }
+.date, .memo, .amount, .selection, .empty {
+  color: var(--sub);
+  font-size: 12px;
+}
+.name {
+  font-size: 14px;
+  font-weight: 700;
+}
+.selection {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.actions button { padding: 7px 10px; }
+.danger { border-color: rgba(255,107,107,.45); color: #ffd0d0; }
+.footer-actions {
+  justify-content: flex-end;
+  padding-top: 4px;
+}

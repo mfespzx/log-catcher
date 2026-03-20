@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Log Catcher",
+  "version": "0.1.0",
+  "description": "サイト上の気になる文章をカテゴリ付きメモとして捕まえる試作版",
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "activeTab",
+    "downloads"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "action": {
+    "default_title": "Log Catcher",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
