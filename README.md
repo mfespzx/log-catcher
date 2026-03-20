@@ -1,4 +1,6 @@
 # Log Catcher
+<img width="431" height="583" alt="image" src="https://github.com/user-attachments/assets/b3b1664d-ce06-45e3-963d-f5068c9dd0a9" />
+
 
 Log Catcher は、Webページ上で選択した文章をその場でカテゴリ付きメモとして保存できる、軽量な Chrome 拡張です。
 
